@@ -16,18 +16,17 @@ export default function ScrollToTop() {
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Tilbage til toppen"
       className={[
-        // Opacity-only transition — no translate, no bounce, no movement
         'transition-opacity duration-300',
         visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
-        // Position & style
         'fixed bottom-6 right-5 sm:bottom-8 sm:right-8 z-40',
-        'w-10 h-10 rounded-full cursor-pointer',
-        'bg-white hover:bg-ab-ivory border border-ab-border hover:border-ab-blue/30',
-        'text-ab-blue shadow-md hover:shadow-lg',
+        'w-11 h-11 rounded-full cursor-pointer',
+        // Dark charcoal — visible on white pages AND the navy footer
+        'bg-[#1e2535] hover:bg-[#2d3650] text-white',
+        'shadow-lg hover:shadow-xl',
         'flex items-center justify-center',
       ].join(' ')}
     >
-      <ChevronUp size={18} strokeWidth={2} />
+      <ChevronUp size={18} strokeWidth={2.5} />
     </button>
   )
 }
