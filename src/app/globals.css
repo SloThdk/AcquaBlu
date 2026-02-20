@@ -4,6 +4,9 @@
   --font-cormorant: 'Cormorant Garamond', serif;
   --font-dm: 'DM Sans', sans-serif;
 
+  /* Custom breakpoint for very small phones (below sm:640px) */
+  --breakpoint-xs: 400px;
+
   --color-ab-cream:   #faf7f0;
   --color-ab-ivory:   #f2ece0;
   --color-ab-card:    #f5f0e6;

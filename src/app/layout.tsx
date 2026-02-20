@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
+import ScrollToTop from '@/components/ScrollToTop'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'], weight: ['300','400','500','600','700'],
@@ -30,10 +31,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="da" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="da" data-scroll-behavior="smooth" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body className="bg-ab-cream text-ab-text antialiased" style={{ fontFamily: 'var(--font-dm)' }}>
         <Navigation />
         {children}
+        <ScrollToTop />
       </body>
     </html>
   )

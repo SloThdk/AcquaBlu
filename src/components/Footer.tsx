@@ -41,8 +41,8 @@ export default function Footer() {
               { icon: Phone, text: restaurant.phone, href: `tel:${restaurant.phone.replace(/\s/g,'')}` },
               { icon: Mail,  text: restaurant.email,  href: `mailto:${restaurant.email}` },
             ].map(({ icon: Icon, text, href }) => (
-              <a key={href} href={href} className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors">
-                <Icon size={13} strokeWidth={1.5} />
+              <a key={href} href={href} className="flex items-start gap-2 text-sm text-white/60 hover:text-white transition-colors break-all">
+                <Icon size={13} strokeWidth={1.5} className="mt-0.5 shrink-0" />
                 {text}
               </a>
             ))}

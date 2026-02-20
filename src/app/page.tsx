@@ -23,7 +23,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-ab-blue/80" />
 
         <div className="relative z-10 text-center px-5 max-w-3xl mx-auto hero-text">
-          <p className="text-[10px] sm:text-xs uppercase tracking-[0.45em] text-white/70 mb-6" style={{ fontFamily: DM }}>
+          <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.45em] text-white/90 mb-6" style={{ fontFamily: DM }}>
             Blåvandvej 28L · Blåvand
           </p>
           <h1 className="font-light leading-none tracking-[0.05em] uppercase text-white mb-4" style={{ fontFamily: CF }}>
@@ -31,19 +31,19 @@ export default function Home() {
             <span className="block text-[clamp(3rem,13vw,7.5rem)] -mt-1">Acqua Blu</span>
           </h1>
           <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-10 bg-white/40" />
-            <p className="text-xs uppercase tracking-[0.3em] text-white/60" style={{ fontFamily: DM }}>Siciliansk køkken · Blåvand</p>
-            <div className="h-px w-10 bg-white/40" />
+            <div className="h-px w-10 bg-white/60" />
+            <p className="text-xs uppercase tracking-[0.3em] text-white/80" style={{ fontFamily: DM }}>Siciliansk køkken · Blåvand</p>
+            <div className="h-px w-10 bg-white/60" />
           </div>
-          <p className="text-white/70 text-sm sm:text-base mb-10 leading-relaxed max-w-sm mx-auto" style={{ fontFamily: DM }}>
+          <p className="text-white/90 text-sm sm:text-base mb-10 leading-relaxed max-w-sm mx-auto" style={{ fontFamily: DM }}>
             Ægte italiensk mad lavet fra bunden — af to sicilianske brødre
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/menu" className="inline-flex items-center justify-center gap-2 bg-white text-ab-blue hover:bg-ab-ivory text-sm font-medium px-7 py-3.5 rounded-lg transition-all" style={{ fontFamily: DM }}>
+            <Link href="/menu" prefetch={false} className="inline-flex items-center justify-center gap-2 bg-white text-ab-blue hover:bg-ab-ivory text-sm font-medium px-7 py-3.5 rounded-lg transition-all" style={{ fontFamily: DM }}>
               Se menukort <ChevronRight size={15} strokeWidth={1.5} />
             </Link>
             <a href={`tel:${restaurant.phone.replace(/\s/g,'')}`}
-              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white text-sm px-7 py-3.5 rounded-lg transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-white/15 border border-white/50 hover:bg-white/25 hover:border-white/80 text-white text-sm px-7 py-3.5 rounded-lg transition-all"
               style={{ fontFamily: DM }}>
               <Phone size={14} strokeWidth={1.5} />
               {restaurant.phone}
@@ -56,17 +56,17 @@ export default function Home() {
 
       {/* ─── FEATURES STRIP ─────────────────────────────────── */}
       <section className="bg-ab-blue border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        <div className="max-w-6xl mx-auto px-2 sm:px-8">
           <div className="grid grid-cols-3">
             {[
               { icon: Award,  label: 'Ægte Siciliansk', sub: 'To brødre fra Sicilien'  },
               { icon: Flame,  label: 'Fra Bunden',      sub: 'Alle retter håndlavede'  },
               { icon: Leaf,   label: 'Åbent Dagligt',   sub: '11:30 til 21:00'         },
             ].map(({ icon: Icon, label, sub }, i) => (
-              <div key={label} className={['flex flex-col items-center text-center gap-1.5 py-6 px-3', i < 2 ? 'border-r border-white/10' : ''].join(' ')}>
-                <Icon size={18} strokeWidth={1.5} className="text-white/60 mb-1" />
-                <p className="text-white text-sm font-medium" style={{ fontFamily: DM }}>{label}</p>
-                <p className="text-white/50 text-xs" style={{ fontFamily: DM }}>{sub}</p>
+              <div key={label} className={['flex flex-col items-center text-center gap-1 py-5 sm:py-6 px-2 sm:px-3', i < 2 ? 'border-r border-white/10' : ''].join(' ')}>
+                <Icon size={15} strokeWidth={1.5} className="text-white/70 mb-0.5 sm:size-[18px]" />
+                <p className="text-white text-[11px] sm:text-sm font-medium leading-snug" style={{ fontFamily: DM }}>{label}</p>
+                <p className="text-white/70 text-[10px] sm:text-xs leading-snug hidden xs:block" style={{ fontFamily: DM }}>{sub}</p>
               </div>
             ))}
           </div>
