@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-dm: 'DM Sans', sans-serif;
+
+  --color-ab-cream:   #faf7f0;
+  --color-ab-ivory:   #f2ece0;
+  --color-ab-card:    #f5f0e6;
+  --color-ab-border:  #e2d9c8;
+  --color-ab-blue:    #1a3968;
+  --color-ab-blue2:   #2a5298;
+  --color-ab-red:     #b83232;
+  --color-ab-text:    #1a1408;
+  --color-ab-muted:   #7a6a55;
+  --color-ab-gold:    #9a7a3a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #faf7f0;
+  color: #1a1408;
+  font-family: 'DM Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+@keyframes heroZoom {
+  from { opacity: 0; transform: scale(1.08); }
+  to   { opacity: 1; transform: scale(1.03); }
+}
+.hero-img { animation: heroZoom 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-text { animation: heroFadeUp 1s ease-out 0.4s both; }
