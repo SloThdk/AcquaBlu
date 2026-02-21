@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail, MapPin, Clock, Facebook } from 'lucide-react'
 import { restaurant } from '@/lib/data'
 
@@ -54,6 +55,26 @@ export default function Footer() {
               <Clock size={13} strokeWidth={1.5} />
               {restaurant.hours}
             </p>
+
+            {/* Kontrol rapport badge */}
+            <div className="mt-4">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-white/40 mb-2">Fødevarekontrol</p>
+              <a
+                href="https://www.findsmiley.dk/Sider/SoegResultat.aspx?SearchPhrase=acqua+blu"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Se kontrol rapport"
+              >
+                <Image
+                  src="/images/kontrol.gif"
+                  alt="Se kontrol rapport"
+                  width={120}
+                  height={60}
+                  style={{ imageRendering: 'auto' }}
+                  unoptimized
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>

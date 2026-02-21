@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Phone } from 'lucide-react'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
+import ItalianFlag from '@/components/ItalianFlag'
 import { pizzas, koed, restaurant } from '@/lib/data'
 
 const CF = 'var(--font-cormorant)'
@@ -65,9 +66,10 @@ function SectionHeader({ title, note }: { title: string; note?: string }) {
         <div className="flex items-center gap-5 mb-3">
           <div className="h-px flex-1 bg-ab-border" />
           <h2
-            className="text-2xl sm:text-3xl font-light uppercase tracking-[0.15em] text-ab-blue whitespace-nowrap"
+            className="text-2xl sm:text-3xl font-light uppercase tracking-[0.15em] text-ab-blue whitespace-nowrap flex items-center gap-3"
             style={{ fontFamily: CF }}
           >
+            <ItalianFlag width={26} height={17} />
             {title}
           </h2>
           <div className="h-px flex-1 bg-ab-border" />
@@ -105,8 +107,8 @@ export default function Menu() {
               </h1>
               <div className="flex items-center justify-center gap-4 mb-3">
                 <div className="h-px w-10 bg-ab-blue/30" />
-                <p className="text-ab-muted text-xs uppercase tracking-[0.25em]" style={{ fontFamily: DM }}>
-                  Alle retter lavet fra bunden
+                <p className="text-ab-muted text-xs uppercase tracking-[0.25em] flex items-center gap-2" style={{ fontFamily: DM }}>
+                  Alle retter lavet fra bunden <ItalianFlag width={22} height={14} />
                 </p>
                 <div className="h-px w-10 bg-ab-blue/30" />
               </div>

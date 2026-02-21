@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { Phone, MapPin, Clock, ChevronRight, Flame, Leaf, Award } from 'lucide-react'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
+import PhotoSlideshow from '@/components/PhotoSlideshow'
+import OwnersSection from '@/components/OwnersSection'
 import { restaurant, pizzas, koed } from '@/lib/data'
 
 const CF = 'var(--font-cormorant)'
@@ -113,6 +115,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── PHOTO SLIDESHOW ────────────────────────────────── */}
+      <PhotoSlideshow />
+
+      {/* ─── OWNERS ─────────────────────────────────────────── */}
+      <OwnersSection />
 
       {/* ─── FEATURED PIZZAS ────────────────────────────────── */}
       <section className="py-20 sm:py-24 bg-ab-ivory">
