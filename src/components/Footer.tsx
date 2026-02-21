@@ -60,7 +60,7 @@ export default function Footer() {
             <div className="mt-4">
               <p className="text-[10px] uppercase tracking-[0.18em] text-white/40 mb-2">Fødevarekontrol</p>
               <a
-                href="https://www.findsmiley.dk/Sider/SoegResultat.aspx?SearchPhrase=acqua+blu"
+                href="https://www.findsmiley.dk/806123"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Se kontrol rapport"

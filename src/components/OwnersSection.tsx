@@ -2,76 +2,58 @@ import Image from 'next/image'
 import ItalianFlag from './ItalianFlag'
 
 const CF = 'var(--font-cormorant)'
-const SC = 'var(--font-script)'   // Great Vibes — matches their handwriting
+const SC = 'var(--font-script)'
 const DM = 'var(--font-dm)'
 
 export default function OwnersSection() {
   return (
     <section className="bg-ab-ivory border-y border-ab-border">
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 py-16 sm:py-20">
+      <div className="max-w-4xl mx-auto px-5 sm:px-8 py-14 sm:py-18">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 sm:gap-12">
 
-        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-
-          {/* ── Photo ─────────────────────────────────────── */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative">
-              <Image
-                src="/images/owners.jpg"
-                alt="Salvatore og Rino Lalicata — ejerne af Acqua Blu"
-                width={340}
-                height={260}
-                className="rounded-2xl object-cover shadow-lg"
-                style={{ width: '340px', height: '260px', objectFit: 'cover', objectPosition: 'center top' }}
-              />
-              {/* Italian flag corner accent */}
-              <div className="absolute -top-3 -right-3">
-                <ItalianFlag width={40} height={26} />
-              </div>
+          {/* Photo */}
+          <div className="relative shrink-0">
+            <Image
+              src="/images/owners.jpg"
+              alt="Salvatore og Rino Lalicata"
+              width={220}
+              height={170}
+              className="rounded-xl shadow-md"
+              style={{ width: '220px', height: '170px', objectFit: 'cover', objectPosition: 'center top' }}
+            />
+            <div className="absolute -top-2.5 -right-2.5">
+              <ItalianFlag width={36} height={23} />
             </div>
           </div>
 
-          {/* ── Text ──────────────────────────────────────── */}
-          <div className="flex flex-col gap-5">
+          {/* Signature block */}
+          <div className="flex flex-col justify-center gap-3 text-center sm:text-left">
+
+            {/* Their actual motto from the menu */}
             <p
-              className="text-xs uppercase tracking-[0.3em] text-ab-blue font-medium"
-              style={{ fontFamily: DM }}
+              className="text-ab-muted text-sm leading-relaxed italic"
+              style={{ fontFamily: CF, fontSize: '1.1rem' }}
             >
-              Mød ejerne
+              "God mad serveret med et smil — og at jeres besøg vil være en god oplevelse."
             </p>
 
-            <h2
-              className="text-3xl sm:text-4xl font-light uppercase tracking-wide text-ab-text leading-tight"
-              style={{ fontFamily: CF }}
-            >
-              To brødre<br />fra Sicilien
-            </h2>
-
-            <p
-              className="text-ab-muted text-sm leading-relaxed"
-              style={{ fontFamily: DM }}
-            >
-              Restauranten drives af to sicilianske brødre, og Acqua Blu er en af de
-              få ægte italienske restauranter på Vestkysten — hvilket vi er stolte af.
-              Alle vores retter bliver tilberedt helt fra bunden.
-            </p>
-
-            {/* Signature — Great Vibes matches their actual handwriting */}
-            <div className="pt-3 border-t border-ab-border/60">
+            {/* Handwritten signature */}
+            <div className="pt-2">
               <p
                 className="text-ab-text leading-snug"
-                style={{ fontFamily: SC, fontSize: '1.9rem', lineHeight: '1.3' }}
+                style={{ fontFamily: SC, fontSize: '2rem', lineHeight: '1.25' }}
               >
                 Buon Appetito
               </p>
               <p
                 className="text-ab-muted"
-                style={{ fontFamily: SC, fontSize: '1.6rem', lineHeight: '1.3' }}
+                style={{ fontFamily: SC, fontSize: '1.65rem', lineHeight: '1.25' }}
               >
                 Salvatore e Rino Lalicata
               </p>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </section>
