@@ -93,15 +93,15 @@ export default function Home() {
 
             <Reveal direction="right" distance={20} duration={700} delay={80}>
               <div>
-                <p className="text-ab-blue text-[10px] uppercase tracking-[0.3em] mb-4" style={{ fontFamily: DM }}>Vores historie</p>
+                <p className="text-ab-blue text-[10px] uppercase tracking-[0.3em] mb-4" style={{ fontFamily: DM }}>Vores køkken</p>
                 <h2 className="text-4xl sm:text-5xl font-light text-ab-text leading-tight mb-5 uppercase tracking-wide" style={{ fontFamily: CF }}>
-                  To brødre<br />fra Sicilien
+                  Ægte Siciliansk<br />Håndværk
                 </h2>
                 <p className="text-ab-muted leading-relaxed mb-3 text-[15px]" style={{ fontFamily: DM }}>
-                  {restaurant.story}
+                  Alle vores retter bliver tilberedt helt fra bunden — hver pizza, hver sauce, hver ret laves med kærlighed til det ægte sicilianske køkken. Vi bruger friske råvarer og opskrifter vi har med hjemmefra.
                 </p>
-                <p className="text-ab-muted text-sm italic mb-8" style={{ fontFamily: DM }}>
-                  — {restaurant.owners}
+                <p className="text-ab-muted leading-relaxed mb-8 text-[15px]" style={{ fontFamily: DM }}>
+                  Har du specielle ønsker, hjælper betjeningen dig gerne. Vi fortæller også gerne om menuens sammensætning og tilberedning.
                 </p>
                 <div className="flex items-center gap-3 p-4 bg-ab-card rounded-xl border border-ab-border">
                   <Clock size={16} strokeWidth={1.5} className="text-ab-blue shrink-0" />
